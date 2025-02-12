@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: process.env.PORT || 4173,  // Gunakan PORT dari lingkungan, default 4173
-    host: true,  // Membuka akses dari luar (jika di Railway)
+    port: process.env.PORT || 3000,  // Gunakan PORT dari lingkungan atau fallback ke port 3000
+    host: '0.0.0.0',  // Akses dari luar
   },
 })
